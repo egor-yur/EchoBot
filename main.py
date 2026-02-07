@@ -12,4 +12,10 @@ def start(m:Message):
 def echo(m:Message):
     bot.reply_to(m, m.text)
 
+@bot.message_handler(commands=["git"])
+def command_git(m:Message):
+    bot.send_message(m.chat.id, "Этот бот добавлен в github")
+
+
+
 bot.infinity_polling()
