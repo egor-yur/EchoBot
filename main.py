@@ -6,7 +6,7 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=["start"])
 def start(m:Message):
-    bot.send_message(m.chat.id, "Бот будет повторять твои сообщения! Попробуй что-нибудь написать")
+    bot.send_message(m.chat.id, "Бот будет повторять твои сообщения! Попробуй что-то написать")
 
 @bot.message_handler(func=lambda message: True)
 def echo(m:Message):
